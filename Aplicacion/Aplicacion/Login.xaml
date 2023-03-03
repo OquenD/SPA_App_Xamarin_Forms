@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Aplicacion.Login"
+             BackgroundColor = "#E6F5FF"> <!---Asignamos color de fondo-->
+             
+    <ContentPage.Content>
+        <!--Asignamos relleno-->   <!--Centramos-->    <!--Rellenar y expandir-->
+        <StackLayout Padding = "40" VerticalOptions = "Center" HorizontalOptions = "FillAndExpand">
+            
+            <!--Importamos imagen-->
+            <Image Source = "Spa.png" WidthRequest = "180" HeightRequest = "180"></Image>
+            
+            
+            <!-- Creamos los label -->
+            <Entry x:Name = "TextUserName" Placeholder = "UserName" TextColor = "Black" PlaceholderColor = "Gray"></Entry>
+            <Entry x:Name = "TextPassword" Placeholder = "Password" IsPassword = "True" TextColor = "Black" PlaceholderColor = "Gray"></Entry>
+            
+            <!--Creamos boton -->
+            <Button Padding = "40"
+                VerticalOptions = "Center"
+                Text = "Login"
+                TextColor = "Black"
+                BackgroundColor = "Transparent"
+                BorderColor = "Black"
+                BorderWidth = "1.5"
+                CornerRadius = "40"
+                Clicked = "Button_Clicked"
+                ></Button>
+            
+            <!--Creamos label -->
+            <Label HorizontalOptions = "Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text = "¿No tienes cuenta?" TextColor = "Gray"></Span>
+                        <Span Text = " Registrate " TextColor = "Gray" FontAttributes = "Bold" TextDecorations = "Underline"></Span>
+
+                    </FormattedString>
+                </Label.FormattedText>
+
+                <!--Agregamos accion para interactura tactil o maus  -->
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped = "TapGestureRecognizer_Tapped"/>
+                </Label.GestureRecognizers>
+            </Label>
+
+            <!--Creamos label -->
+            <Label HorizontalOptions = "Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text = "¿Has olvidado la contraseña?" TextColor = "Gray"></Span>
+                        <Span Text = " Recuperar" TextColor = "Gray" FontAttributes = "Bold" TextDecorations = "Underline"></Span>
+
+                    </FormattedString>
+                </Label.FormattedText>
+
+                <!--Agregamos accion para interactura tactil o maus  -->
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped = "TapGestureRecognizer_Tapped_1"/>
+                </Label.GestureRecognizers>
+            </Label>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
