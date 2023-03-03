@@ -15,6 +15,7 @@ namespace Aplicacion
         public Contenido4()
         {
             InitializeComponent();
+            BindingContext = new BMIViewModelcs();
         }
     }
 }

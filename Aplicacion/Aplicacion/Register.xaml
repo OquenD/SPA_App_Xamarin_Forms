@@ -3,10 +3,46 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Aplicacion.Register">
     <ContentPage.Content>
-        <StackLayout>
+        <!--Asignamos relleno-->
+        <!--Centramos-->
+        <!--Rellenar y expandir-->
+        <StackLayout Padding = "40" VerticalOptions = "Center" HorizontalOptions = "FillAndExpand">
 
-            <CheckBox x:Name="Ingresa tu nombre" ></CheckBox>
-            
+            <!--Importamos imagen-->
+            <Image Source = "Spa.png" WidthRequest = "180" HeightRequest = "180"></Image>
+
+
+            <!-- Creamos los label -->
+            <Entry x:Name = "TextEmail" Placeholder = "@Email" TextColor = "Black" PlaceholderColor = "Gray"></Entry>
+            <Entry x:Name = "TextUserName" Placeholder = "UserName" TextColor = "Black" PlaceholderColor = "Gray"></Entry>
+            <Entry x:Name = "TextPassword" Placeholder = "Password" IsPassword = "True" TextColor = "Black" PlaceholderColor = "Gray"></Entry>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label Text="Aceptar Terminos y condiciones" FontSize="Small" Grid.Row="0" Grid.Column="0"></Label>
+                <CheckBox x:Name="cbTerms" CheckedChanged="CbXamarinFan_CheckedChanged" Grid.Row="0" Grid.Column="1"></CheckBox>
+            </Grid>
+
+            <!--Creamos boton -->
+            <Button Padding = "20"
+                VerticalOptions = "Center"
+                Text = "Register"
+                TextColor = "Gray"
+                BackgroundColor = "#FAE3E3"
+                BorderColor = "#F7D4BC"
+                BorderWidth = "1.0"
+                CornerRadius = "40"
+                Clicked = "Button_Clicked"    
+                ></Button>
+
+
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

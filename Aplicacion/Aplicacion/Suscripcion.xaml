@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Aplicacion.Contenido2">
+    <ContentPage.Content>
+        <!--Asignamos relleno-->
+        <!--Centramos-->
+        <!--Rellenar y expandir-->
+        <StackLayout Padding = "40" VerticalOptions = "Center" HorizontalOptions = "FillAndExpand">
+
+            <!--Importamos imagen-->
+            <Image Source = "Spa.png" WidthRequest = "180" HeightRequest = "180"></Image>
+
+
+            <!-- Creamos los label -->
+            <Entry x:Name = "TextUserName" Placeholder = "Email" TextColor = "Black" PlaceholderColor = "Gray"></Entry>
+
+
+
+            <!-- Radio boton
+            <RadioButton Content="suscribirse a nuestro Newsletter" CheckedChanged="RadioButton_CheckedChanged"/>
+            <RadioButton Content="Recibir correos de Yoga.com" CheckedChanged="RadioButton_CheckedChanged"/>
+            <RadioButton Content="Aceptar Terminos y condiciones" CheckedChanged="RadioButton_CheckedChanged"/>
+            -->
+
+            <!-- Checkbox-->
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label Text="Suscribirse a nuestro Newsletter" FontSize="Small" Grid.Row="0" Grid.Column="0"></Label>
+                <CheckBox x:Name="cbSuscription" CheckedChanged="CbXamarinFan_CheckedChanged" Grid.Row="0" Grid.Column="1"></CheckBox>
+                <Label Text="Recibir correos de Yoga.com" FontSize="Small" Grid.Row="1" Grid.Column="0"></Label>
+                <CheckBox x:Name="cbNewsletter" CheckedChanged="CbXamarinFan_CheckedChanged" Grid.Row="1" Grid.Column="1"></CheckBox>
+                <Label Text="Aceptar Terminos y condiciones" FontSize="Small" Grid.Row="2" Grid.Column="0"></Label>
+                <CheckBox x:Name="cbTerms" CheckedChanged="CbXamarinFan_CheckedChanged" Grid.Row="2" Grid.Column="1"></CheckBox>
+            </Grid>
+
+            <!--Creamos boton -->
+            <Button Padding = "20"
+                VerticalOptions = "Center"
+                Text = "Send"
+                TextColor = "Gray"
+                BackgroundColor = "#FAE3E3"
+                BorderColor = "#F7D4BC"
+                BorderWidth = "1.0"
+                CornerRadius = "40"
+                Clicked = "Button_Clicked"
+                    
+                ></Button>
+
+           
+         
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

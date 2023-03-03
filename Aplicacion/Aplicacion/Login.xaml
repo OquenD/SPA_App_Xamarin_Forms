@@ -17,7 +17,7 @@
             <Entry x:Name = "TextPassword" Placeholder = "Password" IsPassword = "True" TextColor = "Black" PlaceholderColor = "Gray"></Entry>
             
             <!--Creamos boton -->
-            <Button Padding = "40"
+            <Button Padding = "20"
                 VerticalOptions = "Center"
                 Text = "Login"
                 TextColor = "Black"

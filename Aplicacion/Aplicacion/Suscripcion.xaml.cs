@@ -10,23 +10,27 @@ using Xamarin.Forms.Xaml;
 namespace Aplicacion
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Register : ContentPage
+    public partial class Contenido2 : ContentPage
     {
-        public Register()
+        public Contenido2()
         {
             InitializeComponent();
         }
 
-        private void Button_Clicked(object sender, EventArgs e)
+       private void Button_Clicked(object sender, EventArgs e)
         {
-            DisplayAlert("", "Registro Exitoso!", "Ok");
-
-
+            DisplayAlert("Yay", "Gracias por suscribirse !", "Ok");
+               
         }
 
+        private void RadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            
+
+        }
         private void CbXamarinFan_CheckedChanged(object sender, CheckedChangedEventArgs e)
         {
-
+                
         }
     }
 }
