@@ -10,11 +10,12 @@ using Xamarin.Forms.Xaml;
 namespace Aplicacion
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Contenido3 : ContentPage
+    public partial class BMI : ContentPage
     {
-        public Contenido3()
+        public BMI()
         {
             InitializeComponent();
+            BindingContext = new BMIViewModelcs();
         }
     }
 }

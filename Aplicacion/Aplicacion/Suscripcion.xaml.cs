@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace Aplicacion
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Contenido2 : ContentPage
+    public partial class Subscription : ContentPage
     {
-        public Contenido2()
+        public Subscription()
         {
             InitializeComponent();
         }

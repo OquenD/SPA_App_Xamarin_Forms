@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Aplicacion.Chrono">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="Black"
+                   Padding="24"
+                   CornerRadius="0">
+                <Label x:Name="labelSegundos"
+                       Text="0:00"
+                       HorizontalTextAlignment="Start"
+                       TextColor="White"
+                       FontSize="86"
+                       Padding="42,2,2,2" />
+            </Frame>
+            <Frame BackgroundColor="Aquamarine"
+                   Padding="14"
+                   CornerRadius="0">
+                <Label x:Name="labelLimite"
+                       Text="Temporizador segundos: 10"
+                       HorizontalTextAlignment="Start"
+                       TextColor="Black"
+                       FontSize="20"/>
+            </Frame>
+            <Stepper x:Name="stepperSegundos"
+                     ValueChanged="stepperSegundos_ValueChanged"
+                     Minimum="10"
+                     Maximum="60"
+                     Increment="1"
+                     BackgroundColor="Black"
+                     HorizontalOptions="Center"/>
+            <Frame Margin="22">
+                <Button x:Name="buttonActivar"
+                        Clicked="buttonActivar_Clicked"
+                        Text="Activar"
+                        FontSize="24"
+                        BackgroundColor="Black"
+                        TextColor="WhiteSmoke"/>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

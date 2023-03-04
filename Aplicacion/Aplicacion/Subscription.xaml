@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Aplicacion.Contenido2">
+             x:Class="Aplicacion.Subscription">
     <ContentPage.Content>
         <!--Asignamos relleno-->
         <!--Centramos-->
         <!--Rellenar y expandir-->
         <StackLayout Padding = "40" VerticalOptions = "Center" HorizontalOptions = "FillAndExpand">
 
-            <!--Importamos imagen-->
+            <!--Importamos imagen--> 
             <Image Source = "Spa.png" WidthRequest = "180" HeightRequest = "180"></Image>
 
 
@@ -33,11 +33,11 @@
                     <ColumnDefinition Width="2*"></ColumnDefinition>
                     <ColumnDefinition Width="*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
-                <Label Text="Suscribirse a nuestro Newsletter" FontSize="Small" Grid.Row="0" Grid.Column="0"></Label>
+                <Label Text="Subscribir to our Newsletter" FontSize="Small" Grid.Row="0" Grid.Column="0"></Label>
                 <CheckBox x:Name="cbSuscription" CheckedChanged="CbXamarinFan_CheckedChanged" Grid.Row="0" Grid.Column="1"></CheckBox>
-                <Label Text="Recibir correos de Yoga.com" FontSize="Small" Grid.Row="1" Grid.Column="0"></Label>
+                <Label Text="Receive emails from Yoga.com" FontSize="Small" Grid.Row="1" Grid.Column="0"></Label>
                 <CheckBox x:Name="cbNewsletter" CheckedChanged="CbXamarinFan_CheckedChanged" Grid.Row="1" Grid.Column="1"></CheckBox>
-                <Label Text="Aceptar Terminos y condiciones" FontSize="Small" Grid.Row="2" Grid.Column="0"></Label>
+                <Label Text="Accept Terms and Conditions" FontSize="Small" Grid.Row="2" Grid.Column="0"></Label>
                 <CheckBox x:Name="cbTerms" CheckedChanged="CbXamarinFan_CheckedChanged" Grid.Row="2" Grid.Column="1"></CheckBox>
             </Grid>
 

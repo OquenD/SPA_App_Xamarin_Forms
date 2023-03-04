@@ -25,12 +25,12 @@
                     <ColumnDefinition Width="2*"></ColumnDefinition>
                     <ColumnDefinition Width="*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
-                <Label Text="Aceptar Terminos y condiciones" FontSize="Small" Grid.Row="0" Grid.Column="0"></Label>
+                <Label Text="Accept Terms and Conditions" FontSize="Small" Grid.Row="0" Grid.Column="0"></Label>
                 <CheckBox x:Name="cbTerms" CheckedChanged="CbXamarinFan_CheckedChanged" Grid.Row="0" Grid.Column="1"></CheckBox>
             </Grid>
 
             <!--Creamos boton -->
-            <Button Padding = "20"
+            <Button Padding = "10"
                 VerticalOptions = "Center"
                 Text = "Register"
                 TextColor = "Gray"

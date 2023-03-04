@@ -16,19 +16,25 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="BMi.xaml.cs">
+      <DependentUpon>BMi.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Chrono.xaml.cs">
+      <DependentUpon>Chrono.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Suscripcion.xaml.cs">
       <DependentUpon>Suscripcion.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Suscripcion.xaml">
+    <EmbeddedResource Update="Subscription.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Contenido3.xaml">
+    <EmbeddedResource Update="Chrono.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Contenido4.xaml">
+    <EmbeddedResource Update="BMi.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Home.xaml">

@@ -36,9 +36,9 @@ namespace Aplicacion
                     /* aqui colocamos colocamos el mismo nombre que los formularios */
                     /* agregamos el iconsource para las imagenes */
                     new HomepageFlyoutMenuItem { Id = 0, Title = "Home",IconSource = "Home.png", TargetType = typeof(Home) },
-                    new HomepageFlyoutMenuItem { Id = 1, Title = "Suscripciones",IconSource = "", TargetType = typeof(Contenido2)},
-                    new HomepageFlyoutMenuItem { Id = 2, Title = "Contenido 3",IconSource = "", TargetType = typeof(Contenido3) },
-                    new HomepageFlyoutMenuItem { Id = 3, Title = "BMI",IconSource = "", TargetType = typeof(Contenido4)},
+                    new HomepageFlyoutMenuItem { Id = 1, Title = "Subscription",IconSource = "", TargetType = typeof(Subscription)},
+                    new HomepageFlyoutMenuItem { Id = 2, Title = "Timer",IconSource = "", TargetType = typeof(Chrono) },
+                    new HomepageFlyoutMenuItem { Id = 3, Title = "BMI",IconSource = "", TargetType = typeof(BMI)},
                  
                 });
             }
