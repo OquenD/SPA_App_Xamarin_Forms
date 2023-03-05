@@ -19,15 +19,10 @@ namespace Aplicacion
 
        private void Button_Clicked(object sender, EventArgs e)
         {
-            DisplayAlert("Yay", "Gracias por suscribirse !", "Ok");
+            DisplayAlert("", "Thank you for subscribing!", "Ok");
                
         }
 
-        private void RadioButton_CheckedChanged(object sender, EventArgs e)
-        {
-            
-
-        }
         private void CbXamarinFan_CheckedChanged(object sender, CheckedChangedEventArgs e)
         {
                 

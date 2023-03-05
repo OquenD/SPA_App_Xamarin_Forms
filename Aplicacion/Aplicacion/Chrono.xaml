@@ -4,39 +4,38 @@
              x:Class="Aplicacion.Chrono">
     <ContentPage.Content>
         <StackLayout>
-            <Frame BackgroundColor="Black"
+            <Frame 
                    Padding="24"
                    CornerRadius="0">
-                <Label x:Name="labelSegundos"
+                <Label x:Name="labelSeconds"
                        Text="0:00"
                        HorizontalTextAlignment="Start"
-                       TextColor="White"
-                       FontSize="86"
-                       Padding="42,2,2,2" />
-            </Frame>
-            <Frame BackgroundColor="Aquamarine"
-                   Padding="14"
-                   CornerRadius="0">
-                <Label x:Name="labelLimite"
-                       Text="Temporizador segundos: 10"
-                       HorizontalTextAlignment="Start"
                        TextColor="Black"
+                       FontSize="86"
+                       Padding="120,2,2,2" />
+            </Frame>
+            <Frame BackgroundColor="#F7D4BC"
+                   Padding="14"
+                   CornerRadius="3">
+                <Label x:Name="labelLimit"
+                       Text="Timer in Seconds: 10"
+                       HorizontalTextAlignment="Start"
+                       TextColor="Gray"
                        FontSize="20"/>
             </Frame>
-            <Stepper x:Name="stepperSegundos"
-                     ValueChanged="stepperSegundos_ValueChanged"
+            <Stepper x:Name="stepperSeconds"
+                     ValueChanged="stepperSeconds_ValueChanged"
                      Minimum="10"
                      Maximum="60"
                      Increment="1"
-                     BackgroundColor="Black"
                      HorizontalOptions="Center"/>
             <Frame Margin="22">
-                <Button x:Name="buttonActivar"
-                        Clicked="buttonActivar_Clicked"
-                        Text="Activar"
+                <Button x:Name="buttonActivate"
+                        Clicked="buttonActivate_Clicked"
+                        Text="Activate"
                         FontSize="24"
-                        BackgroundColor="Black"
-                        TextColor="WhiteSmoke"/>
+                        BackgroundColor="#F7D4BC"
+                        TextColor="Gray"/>
             </Frame>
         </StackLayout>
     </ContentPage.Content>

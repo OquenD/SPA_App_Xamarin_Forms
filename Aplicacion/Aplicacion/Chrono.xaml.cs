@@ -18,59 +18,64 @@ namespace Aplicacion
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Chrono : ContentPage
     {
-        float centesimas = 0f;
-        int segundos = 0;
-        Timer miTimer;
-        bool banderaActivo = false;
+        float cents = 0f;
+        int seconds = 0;
+        Timer myTimer;
+        bool activeFlag = false;
         public Chrono()
         {
             InitializeComponent();
-            miTimer = new System.Timers.Timer();
-            miTimer.Interval = 100;
-            miTimer.Enabled = false;
-            miTimer.Elapsed += MiTimer_Elapsed;
+            myTimer = new System.Timers.Timer();
+            myTimer.Interval = 100;
+            myTimer.Enabled = false;
+            myTimer.Elapsed += MyTimer_Elapsed;
         }
 
-        private void MiTimer_Elapsed(object sender, ElapsedEventArgs e)
+        private void MyTimer_Elapsed(object sender, ElapsedEventArgs e)
         {
-            centesimas += 0.1f;
-            if (centesimas >= 1)
+            cents += 0.1f;
+            if (cents >= 1)
             {
-                segundos++;
-                centesimas = 0f;
-                if (segundos == (int)stepperSegundos.Value)
+                seconds++;
+                cents = 0f;
+                if (seconds == (int)stepperSeconds.Value)
                 {
-                    banderaActivo = false;
-                    segundos = 0;
-                    miTimer.Stop();
-                    miTimer.Enabled = false;
-                    labelSegundos.Text = segundos.ToString() + ":00";
-                    Device.BeginInvokeOnMainThread(() => buttonActivar.Text = "Activate");
-                   
                     
+                    seconds = 0;
+                    myTimer.Stop();
+                    activeFlag = false;
+                    myTimer.Enabled = false;
+                    labelSeconds.Text = seconds.ToString() + ":00";
+                    Device.BeginInvokeOnMainThread(() => buttonActivate.Text = "Activate");
+                    buttonActivate.IsEnabled = false;
+                    
+
+
+
                 }
 
             }
-            centesimas = (float)Math.Round(centesimas, 2);
-            if (banderaActivo == true)// evitar un error de al refrescar dato
+            cents = (float)Math.Round(cents, 2);
+            if (activeFlag == true)// evitar un error de al refrescar dato
             {
-                Device.BeginInvokeOnMainThread(() => labelSegundos.Text = segundos.ToString() + ":" + centesimas.ToString());
+                Device.BeginInvokeOnMainThread(() => labelSeconds.Text = seconds.ToString() + ":" + cents.ToString());
             }
         }
 
-        private void stepperSegundos_ValueChanged(object sender, ValueChangedEventArgs e)
+        private void stepperSeconds_ValueChanged(object sender, ValueChangedEventArgs e)
         {
-            labelLimite.Text = "Time in Seconds: " + stepperSegundos.Value.ToString();
+            labelLimit.Text = "Time in Seconds: " + stepperSeconds.Value.ToString();
         }
 
-        private void buttonActivar_Clicked(object sender, EventArgs e)
+        private void buttonActivate_Clicked(object sender, EventArgs e)
         {
-            if (banderaActivo == false)
+            if (activeFlag == false)
             {
-                banderaActivo = true;
-                buttonActivar.Text = "Activate";
-                miTimer.Enabled = true;
-                miTimer.Start();
+                activeFlag = true;
+                buttonActivate.Text = "";
+                myTimer.Enabled = true;
+                myTimer.Start();
+
 
             }
 

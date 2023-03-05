@@ -17,13 +17,7 @@
 
 
 
-            <!-- Radio boton
-            <RadioButton Content="suscribirse a nuestro Newsletter" CheckedChanged="RadioButton_CheckedChanged"/>
-            <RadioButton Content="Recibir correos de Yoga.com" CheckedChanged="RadioButton_CheckedChanged"/>
-            <RadioButton Content="Aceptar Terminos y condiciones" CheckedChanged="RadioButton_CheckedChanged"/>
-            -->
-
-            <!-- Checkbox-->
+         <!-- Checkbox-->
 
             <Grid>
                 <Grid.RowDefinitions>
@@ -33,7 +27,7 @@
                     <ColumnDefinition Width="2*"></ColumnDefinition>
                     <ColumnDefinition Width="*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
-                <Label Text="Subscribir to our Newsletter" FontSize="Small" Grid.Row="0" Grid.Column="0"></Label>
+                <Label Text="Subscribe to our Newsletter" FontSize="Small" Grid.Row="0" Grid.Column="0"></Label>
                 <CheckBox x:Name="cbSuscription" CheckedChanged="CbXamarinFan_CheckedChanged" Grid.Row="0" Grid.Column="1"></CheckBox>
                 <Label Text="Receive emails from Yoga.com" FontSize="Small" Grid.Row="1" Grid.Column="0"></Label>
                 <CheckBox x:Name="cbNewsletter" CheckedChanged="CbXamarinFan_CheckedChanged" Grid.Row="1" Grid.Column="1"></CheckBox>

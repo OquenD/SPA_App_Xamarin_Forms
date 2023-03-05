@@ -16,5 +16,11 @@ namespace Aplicacion
 		{
 			InitializeComponent ();
 		}
-	}
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            DisplayAlert("", "The recovery link has been sent to your email", "Ok");
+
+        }
+    }
 }

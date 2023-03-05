@@ -3,10 +3,34 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Aplicacion.Recover">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout Padding = "40" VerticalOptions = "Center" HorizontalOptions = "FillAndExpand">
+
+            <!--Importamos imagen-->
+            <Image Source = "Spa.png" WidthRequest = "180" HeightRequest = "180"></Image>
+
+
+            <!-- Creamos los label -->
+            <Entry x:Name = "TextUserName" Placeholder = "@Email" TextColor = "Black" PlaceholderColor = "Gray"></Entry>
+
+
+
+        
+            <!--Creamos boton -->
+            <Button Padding = "20"
+                VerticalOptions = "Center"
+                Text = "Send"
+                TextColor = "Gray"
+                BackgroundColor = "#FAE3E3"
+                BorderColor = "#F7D4BC"
+                BorderWidth = "1.0"
+                CornerRadius = "40"
+                Clicked = "Button_Clicked"
+                    
+                ></Button>
+
+
+
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
