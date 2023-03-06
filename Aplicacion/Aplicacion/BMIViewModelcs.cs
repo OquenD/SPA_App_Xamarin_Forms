@@ -39,13 +39,13 @@ namespace Aplicacion
         get
         {
             if (Bmi < 18.5)
-                return "Estas de Bajo peso";
+                return "You are Underweight";
             else if (Bmi < 25)
-                return "Tienes peso Normal";
+                return "You are of Normal weight";
             else if (Bmi < 30)
-                return "Estas de Sobre peso";
+                return "You are Overweight";
             else
-                return "Tienes Obesidad";
+                return "You have Obesity";
         }
     }
 

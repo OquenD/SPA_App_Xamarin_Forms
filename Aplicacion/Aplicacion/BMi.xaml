@@ -48,7 +48,7 @@
                 JustifyContent="SpaceEvenly"
                 Padding="20">
         <StackLayout>
-            <Label Text="¿Cual es tu altura ?"
+            <Label Text="What is your height ?"
                    Style="{StaticResource TitleStyle}"/>
             <Label Text="{Binding Source={x:Reference HeightSlider},
                     Path=Value,
@@ -60,7 +60,7 @@
                     Value="{Binding Height}"/>
         </StackLayout>
         <StackLayout>
-            <Label Text="¿ Cual es tu peso ?"
+            <Label Text="What is your weight?"
                    Style="{StaticResource TitleStyle}"/>
             <Label Text="{Binding Source={x:Reference WeightSlider},
                     Path=Value,
@@ -72,7 +72,7 @@
                     Value="{Binding Weight}"/>
         </StackLayout>
         <StackLayout>
-            <Label Text=" Tu Bmi is"
+            <Label Text=" Your Bmi is"
                    Style="{StaticResource LabelStyle}"
                    />
             <Label Text="{Binding Bmi}"

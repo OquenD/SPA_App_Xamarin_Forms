@@ -28,7 +28,7 @@ namespace Aplicacion
             else
             {
                 // Agregamos un mensaje de error si el usuario o contraseña son incorrectos
-                DisplayAlert("Ops","Usuario o contraseña incorrecta", "Intetalo de nuevo");
+                DisplayAlert("Oops","Wrong username or password ", "Try again");
             }
 
         }

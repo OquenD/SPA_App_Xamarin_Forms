@@ -19,7 +19,7 @@ namespace Aplicacion
 
         private void Button_Clicked(object sender, EventArgs e)
         {
-            DisplayAlert("", "Registro Exitoso!", "Ok");
+            DisplayAlert("", "Account Created ", "Ok");
 
 
         }

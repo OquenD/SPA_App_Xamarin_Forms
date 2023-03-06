@@ -12,21 +12,21 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 
-
 namespace Aplicacion
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Chrono : ContentPage
     {
-        float cents = 0f;
-        int seconds = 0;
-        Timer myTimer;
-        bool activeFlag = false;
+        private float cents = 0f;
+        private int seconds = 0;
+        private Timer myTimer;
+        private bool activeFlag = false;
+
         public Chrono()
         {
             InitializeComponent();
-            myTimer = new System.Timers.Timer();
-            myTimer.Interval = 100;
+
+            myTimer = new Timer();
+            myTimer.Interval = 100; // refreshes every 100 milliseconds
             myTimer.Enabled = false;
             myTimer.Elapsed += MyTimer_Elapsed;
         }
@@ -40,31 +40,19 @@ namespace Aplicacion
                 cents = 0f;
                 if (seconds == (int)stepperSeconds.Value)
                 {
-                    
                     seconds = 0;
                     myTimer.Stop();
                     activeFlag = false;
-                    myTimer.Enabled = false;
-                    labelSeconds.Text = seconds.ToString() + ":00";
+                    Device.BeginInvokeOnMainThread(() => labelSeconds.Text = "0:00");
                     Device.BeginInvokeOnMainThread(() => buttonActivate.Text = "Activate");
-                    buttonActivate.IsEnabled = false;
-                    
-
-
-
                 }
-
             }
+
             cents = (float)Math.Round(cents, 2);
-            if (activeFlag == true)// evitar un error de al refrescar dato
+            if (activeFlag == true)
             {
-                Device.BeginInvokeOnMainThread(() => labelSeconds.Text = seconds.ToString() + ":" + cents.ToString());
+                Device.BeginInvokeOnMainThread(() => labelSeconds.Text = seconds.ToString() + ":" + cents.ToString("00"));
             }
-        }
-
-        private void stepperSeconds_ValueChanged(object sender, ValueChangedEventArgs e)
-        {
-            labelLimit.Text = "Time in Seconds: " + stepperSeconds.Value.ToString();
         }
 
         private void buttonActivate_Clicked(object sender, EventArgs e)
@@ -75,10 +63,14 @@ namespace Aplicacion
                 buttonActivate.Text = "";
                 myTimer.Enabled = true;
                 myTimer.Start();
-
-
             }
+        }
+
+        private void stepperSeconds_ValueChanged(object sender, ValueChangedEventArgs e)
+        {
+            labelLimit.Text = "Time in Seconds: " + stepperSeconds.Value.ToString();
 
         }
+
     }
 }

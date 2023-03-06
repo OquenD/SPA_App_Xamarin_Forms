@@ -32,7 +32,7 @@
             <!--Creamos boton -->
             <Button Padding = "10"
                 VerticalOptions = "Center"
-                Text = "Register"
+                Text = "Create Account"
                 TextColor = "Gray"
                 BackgroundColor = "#FAE3E3"
                 BorderColor = "#F7D4BC"

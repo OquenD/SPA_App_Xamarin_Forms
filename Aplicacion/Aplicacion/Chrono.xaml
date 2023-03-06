@@ -2,41 +2,28 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Aplicacion.Chrono">
-    <ContentPage.Content>
-        <StackLayout>
-            <Frame 
-                   Padding="24"
-                   CornerRadius="0">
-                <Label x:Name="labelSeconds"
-                       Text="0:00"
-                       HorizontalTextAlignment="Start"
-                       TextColor="Black"
-                       FontSize="86"
-                       Padding="120,2,2,2" />
-            </Frame>
-            <Frame BackgroundColor="#F7D4BC"
-                   Padding="14"
-                   CornerRadius="3">
-                <Label x:Name="labelLimit"
-                       Text="Timer in Seconds: 10"
-                       HorizontalTextAlignment="Start"
-                       TextColor="Gray"
-                       FontSize="20"/>
-            </Frame>
-            <Stepper x:Name="stepperSeconds"
-                     ValueChanged="stepperSeconds_ValueChanged"
-                     Minimum="10"
-                     Maximum="60"
-                     Increment="1"
-                     HorizontalOptions="Center"/>
-            <Frame Margin="22">
-                <Button x:Name="buttonActivate"
-                        Clicked="buttonActivate_Clicked"
-                        Text="Activate"
-                        FontSize="24"
-                        BackgroundColor="#F7D4BC"
-                        TextColor="Gray"/>
-            </Frame>
-        </StackLayout>
-    </ContentPage.Content>
+    <StackLayout VerticalOptions="Center">
+        <Label x:Name="labelLimit"
+               Text="Time in Seconds: "
+               TextColor="Black"
+               HorizontalOptions="CenterAndExpand" />
+        <Stepper x:Name="stepperSeconds"
+                 Minimum="1"
+                 Maximum="300"
+                 Increment="1"
+                 Value="0"
+                 ValueChanged="stepperSeconds_ValueChanged"
+                 HorizontalOptions="CenterAndExpand" />
+        <Label x:Name="labelSeconds"
+               Text="0:00" 
+               TextColor="Black"
+               FontSize="86"
+               HorizontalOptions="CenterAndExpand" />
+        <Button x:Name="buttonActivate"
+                Text="Activate"
+                Clicked="buttonActivate_Clicked"
+                HorizontalOptions="CenterAndExpand"
+                Font="24"
+                Margin="24" />
+    </StackLayout>
 </ContentPage>
